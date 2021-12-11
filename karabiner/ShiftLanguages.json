@@ -1,0 +1,70 @@
+{
+    "title": "Language Toggler",
+    "rules": [
+    {
+        "description": "Language toggler on RSHIFT + RCOMMAND",
+        "manipulators": [
+        {
+            "conditions": [
+            {
+                "input_sources": [
+                {
+                    "input_source_id": "com.apple.keylayout.ABC"
+                }],
+                "type": "input_source_if"
+            }],
+            "from":
+            {
+                "key_code": "left_shift",
+                "modifiers":
+                {
+                    "mandatory": ["left_command"]
+                }
+            },
+            "to": [
+            {
+                "key_code": "left_shift",
+                "modifiers": ["left_command"]
+            }],
+            "to_if_alone": [
+            {
+                "select_input_source":
+                {
+                    "input_source_id": "com.apple.keylayout.Russian"
+                }
+            }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+            {
+                "input_sources": [
+                {
+                    "input_source_id": "com.apple.keylayout.Russian"
+                }],
+                "type": "input_source_if"
+            }],
+            "from":
+            {
+                "key_code": "left_shift",
+                "modifiers":
+                {
+                    "mandatory": ["left_command"]
+                }
+            },
+            "to": [
+            {
+                "key_code": "left_shift",
+                "modifiers": ["left_command"]
+            }],
+            "to_if_alone": [
+            {
+                "select_input_source":
+                {
+                    "input_source_id": "com.apple.keylayout.ABC"
+                }
+            }],
+            "type": "basic"
+        }]
+    }]
+}
